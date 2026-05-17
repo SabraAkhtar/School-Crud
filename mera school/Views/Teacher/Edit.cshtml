@@ -1,0 +1,120 @@
+@model mera_school.Models.Teacher
+@{
+    ViewData["Title"] = "Edit Teacher";
+}
+
+<div class="page-header animate-in">
+    <div>
+        <h1 class="page-title"><i class="fas fa-user-edit me-2" style="color:var(--warning)"></i>Edit Teacher</h1>
+        <div class="page-subtitle">Update information for @Model.FullName</div>
+    </div>
+    <a asp-action="Index" class="btn-outline-custom"><i class="fas fa-arrow-left"></i> Back to List</a>
+</div>
+
+<div class="row justify-content-center animate-in delay-1">
+    <div class="col-xl-9 col-lg-10">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <div class="form-card">
+
+                <!-- Image Upload -->
+                <div class="text-center mb-4">
+                    <div class="img-preview-wrapper" onclick="document.getElementById('imageFile').click()">
+                        @if (!string.IsNullOrEmpty(Model.TeacherImage))
+                        {
+                            <img id="imgPreview" src="@Model.TeacherImage" alt="@Model.FullName" style="width:100%;height:100%;object-fit:cover;" />
+                            <div id="imgPlaceholder" class="img-preview-placeholder" style="display:none;"></div>
+                        }
+                        else
+                        {
+                            <img id="imgPreview" src="#" alt="Preview" style="display:none;width:100%;height:100%;object-fit:cover;" />
+                            <div id="imgPlaceholder" class="img-preview-placeholder">
+                                <i class="fas fa-camera fa-2x mb-1 d-block" style="color:#bae6fd;"></i>
+                                <span>Click to upload photo</span>
+                            </div>
+                        }
+                    </div>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/*" class="d-none" onchange="previewImage(this)" />
+                    <div class="text-muted-sm mt-1">Leave empty to keep current photo</div>
+                </div>
+
+                <div class="form-section-title" style="color:var(--secondary);border-color:#e0f2fe;">
+                    <i class="fas fa-user"></i> Personal Information
+                </div>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="FullName" class="form-label-custom"><i class="fas fa-user" style="color:var(--secondary)"></i> Full Name *</label>
+                        <input asp-for="FullName" class="form-control-custom" />
+                        <span asp-validation-for="FullName" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Email" class="form-label-custom"><i class="fas fa-envelope" style="color:var(--secondary)"></i> Email *</label>
+                        <input asp-for="Email" type="email" class="form-control-custom" />
+                        <span asp-validation-for="Email" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="PhoneNumber" class="form-label-custom"><i class="fas fa-phone" style="color:var(--secondary)"></i> Phone *</label>
+                        <input asp-for="PhoneNumber" class="form-control-custom" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="JoinDate" class="form-label-custom"><i class="fas fa-calendar-alt" style="color:var(--secondary)"></i> Join Date *</label>
+                        <input asp-for="JoinDate" type="date" class="form-control-custom" />
+                        <span asp-validation-for="JoinDate" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                </div>
+
+                <div class="form-section-title" style="color:var(--secondary);border-color:#e0f2fe;">
+                    <i class="fas fa-briefcase"></i> Professional Information
+                </div>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <label asp-for="Subject" class="form-label-custom"><i class="fas fa-book" style="color:var(--secondary)"></i> Subject *</label>
+                        <select asp-for="Subject" class="form-control-custom">
+                            @foreach (var s in new[]{"Mathematics","English","Science","Physics","Chemistry","Biology","History","Geography","Computer Science","Urdu","Islamiat","Arts"})
+                            {
+                                <option value="@s">@s</option>
+                            }
+                        </select>
+                        <span asp-validation-for="Subject" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="Qualification" class="form-label-custom"><i class="fas fa-graduation-cap" style="color:var(--secondary)"></i> Qualification *</label>
+                        <input asp-for="Qualification" class="form-control-custom" />
+                        <span asp-validation-for="Qualification" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="Salary" class="form-label-custom"><i class="fas fa-money-bill-wave" style="color:var(--secondary)"></i> Salary (PKR) *</label>
+                        <input asp-for="Salary" type="number" class="form-control-custom" min="0" step="500" />
+                        <span asp-validation-for="Salary" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3 justify-content-end pt-2 border-top">
+                    <a asp-action="Index" class="btn-outline-custom"><i class="fas fa-times"></i> Cancel</a>
+                    <button type="submit" class="btn-primary-custom" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8);">
+                        <i class="fas fa-save"></i> Update Teacher
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    document.getElementById('imgPreview').src = e.target.result;
+                    document.getElementById('imgPreview').style.display = 'block';
+                    document.getElementById('imgPlaceholder').style.display = 'none';
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

@@ -1,0 +1,168 @@
+@model IEnumerable<mera_school.Models.Teacher>
+@{
+    ViewData["Title"] = "Teachers";
+    int page       = ViewBag.Page       ?? 1;
+    int totalPages = ViewBag.TotalPages ?? 1;
+    int total      = ViewBag.TotalRecords ?? 0;
+    string search  = ViewBag.Search    ?? "";
+    string sortBy  = ViewBag.SortBy    ?? "name";
+    string subject = ViewBag.Subject   ?? "";
+    var subjects   = ViewBag.Subjects  as List<string> ?? new List<string>();
+}
+
+<div class="page-header animate-in">
+    <div>
+        <h1 class="page-title"><i class="fas fa-chalkboard-teacher me-2" style="color:var(--secondary)"></i>Teachers</h1>
+        <div class="page-subtitle">Manage all teaching staff – @total record(s) found</div>
+    </div>
+    <a asp-action="Create" class="btn-primary-custom">
+        <i class="fas fa-plus-circle"></i> Add Teacher
+    </a>
+</div>
+
+<!-- Filter Bar -->
+<div class="filter-bar animate-in delay-1">
+    <form method="get" asp-action="Index" class="row g-2 align-items-end">
+        <div class="col-md-4">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" name="search" value="@search" class="search-input" placeholder="Search by name, email, subject…" />
+            </div>
+        </div>
+        <div class="col-md-3">
+            <select name="subject" class="form-control-custom">
+                <option value="">All Subjects</option>
+                @foreach (var s in subjects)
+                {
+                    <option value="@s" selected="@(subject == s ? "selected" : null)">@s</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select name="sortBy" class="form-control-custom">
+                <option value="name"    selected="@(sortBy=="name"    ? "selected" : null)">Sort: Name</option>
+                <option value="salary"  selected="@(sortBy=="salary"  ? "selected" : null)">Sort: Salary</option>
+                <option value="subject" selected="@(sortBy=="subject" ? "selected" : null)">Sort: Subject</option>
+                <option value="date"    selected="@(sortBy=="date"    ? "selected" : null)">Sort: Join Date</option>
+            </select>
+        </div>
+        <div class="col-md-3 d-flex gap-2">
+            <button type="submit" class="btn-primary-custom flex-fill" style="justify-content:center;">
+                <i class="fas fa-filter"></i> Filter
+            </button>
+            <a asp-action="Index" class="btn-outline-custom" style="padding:10px 12px;">
+                <i class="fas fa-redo"></i>
+            </a>
+        </div>
+    </form>
+</div>
+
+<!-- Table Card -->
+<div class="content-card animate-in delay-2">
+    <div class="table-responsive">
+        @if (!Model.Any())
+        {
+            <div class="empty-state">
+                <i class="fas fa-chalkboard-teacher d-block"></i>
+                <h5>No teachers found</h5>
+                <p class="text-muted-sm">Try adjusting your search or add a new teacher.</p>
+                <a asp-action="Create" class="btn-primary-custom mt-2 d-inline-flex">
+                    <i class="fas fa-plus"></i> Add Teacher
+                </a>
+            </div>
+        }
+        else
+        {
+            <table class="school-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Teacher</th>
+                        <th>Subject</th>
+                        <th>Qualification</th>
+                        <th>Phone</th>
+                        <th>Salary</th>
+                        <th>Join Date</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var t in Model)
+                    {
+                        <tr>
+                            <td class="text-muted-sm fw-600">@t.Id</td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    @if (!string.IsNullOrEmpty(t.TeacherImage))
+                                    {
+                                        <img src="@t.TeacherImage" class="table-avatar" alt="@t.FullName" />
+                                    }
+                                    else
+                                    {
+                                        <div class="table-avatar-placeholder" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8);">
+                                            @t.FullName.Substring(0,1).ToUpper()
+                                        </div>
+                                    }
+                                    <div>
+                                        <div class="fw-600">@t.FullName</div>
+                                        <div class="text-muted-sm">@t.Email</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge-class" style="background:#e0f2fe;color:#0369a1;">@t.Subject</span></td>
+                            <td class="text-muted-sm">@t.Qualification</td>
+                            <td class="text-muted-sm">@t.PhoneNumber</td>
+                            <td class="fw-600" style="color:#10b981;">PKR @t.Salary.ToString("N0")</td>
+                            <td class="text-muted-sm">@t.JoinDate.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                <div class="d-flex gap-1 justify-content-center">
+                                    <a asp-action="Details" asp-route-id="@t.Id" class="action-btn view" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@t.Id" class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <form id="del-t-@t.Id" asp-action="Delete" asp-route-id="@t.Id" method="post" style="display:inline;">
+                                        @Html.AntiForgeryToken()
+                                        <button type="button" class="action-btn delete" title="Delete"
+                                                onclick="confirmDelete('del-t-@t.Id')">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+    @if (totalPages > 1)
+    {
+        string prevDisabled = page == 1 ? "disabled" : "";
+        string nextDisabled = page == totalPages ? "disabled" : "";
+        <div class="d-flex justify-content-between align-items-center px-4 py-3 border-top">
+            <span class="text-muted-sm">Page @(page) of @(totalPages)</span>
+            <div class="pagination-custom">
+                <a asp-action="Index" asp-route-pageNum="@(page-1)" asp-route-search="@search"
+                   asp-route-sortBy="@sortBy" asp-route-subject="@subject"
+                   class="page-btn @prevDisabled">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                @for (int i = Math.Max(1, page - 2); i <= Math.Min(totalPages, page + 2); i++)
+                {
+                    string activeClass = i == page ? "active" : "";
+                    <a asp-action="Index" asp-route-pageNum="@i" asp-route-search="@search"
+                       asp-route-sortBy="@sortBy" asp-route-subject="@subject"
+                       class="page-btn @activeClass">@i</a>
+                }
+                <a asp-action="Index" asp-route-pageNum="@(page+1)" asp-route-search="@search"
+                   asp-route-sortBy="@sortBy" asp-route-subject="@subject"
+                   class="page-btn @nextDisabled">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    }
+</div>

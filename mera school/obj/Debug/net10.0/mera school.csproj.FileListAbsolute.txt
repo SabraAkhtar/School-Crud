@@ -1,0 +1,222 @@
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.csproj.AssemblyReference.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.AssemblyInfoInputs.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.AssemblyInfo.cs
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.csproj.CoreCompileInputs.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.RazorAssemblyInfo.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.RazorAssemblyInfo.cs
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\appsettings.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\mera school.staticwebassets.runtime.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\mera school.staticwebassets.endpoints.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\mera school.exe
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\mera school.deps.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\mera school.runtimeconfig.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\mera school.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\mera school.pdb
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Humanizer.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\scopedcss\bundle\mera school.styles.css
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\scopedcss\projectbundle\mera school.bundle.scp.css
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\8uj9urcnn5-{0}-zpl8yrg78a-zpl8yrg78a.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\qa0pxk0kcn-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\0tuxoq977x-{0}-dhkmfqx99o-dhkmfqx99o.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\xtc1fdecad-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\o2rb32flof-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\sr6fo5ceg8-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\ymzljq4qof-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\y77ncg90bn-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\974bg890a7-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\1yqbqqkdj1-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\9tk8oza7jf-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\dbua1znpch-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\icni8lp48m-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\t04a1f3iz7-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\e5g3ki31qk-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\8nmg9skoqf-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\9vldrnygx6-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\r7s07o6t7m-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\iltuvu18a1-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\x53647q2au-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\9ecvps6ljx-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\1w21a0lay3-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\ss2ngha9gt-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\8hvlx9aq2s-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\uggmg11ndi-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\k734bfob4k-{0}-06098lyss8-06098lyss8.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\vob8smd3dc-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\65906j4vux-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\gyy9rqs1v6-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\fezenvozr1-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\6kthz4wddp-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\na5ose720x-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\5t9huz7em5-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\bsved3joew-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\xnd090ee6w-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\3zbkymohjc-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\exa86pkwt7-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\e8q9yxr7fg-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\9hgtcquywn-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\tqsq8yizm2-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\epr076s7x2-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\6vhj7n9zjg-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\46xxh7ezdo-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\wr0c54ggcf-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\ipd0r27ity-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\1xlvg695j9-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\vu4qybjvyu-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\zcpn8umf6s-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\qfrpg0knve-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\mosw712kvo-{0}-356vix0kms-356vix0kms.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\5jmp9g9ss5-{0}-83jwlth58m-83jwlth58m.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\cn0jflcrun-{0}-mrlpezrjn3-mrlpezrjn3.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\2ty0v8h2av-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\7ih7c8vj0o-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\p5ez2bp9yo-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\dy6bcow9q1-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\zesg9nnleq-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\e3ihnev1ww-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\md3l6v2j3a-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\0fs88m1f5t-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\ct9rbappvi-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\0nlpp1zitl-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\vbnuos4ykz-{0}-nhph00i94d-nhph00i94d.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\compressed\sm5udilp0v-{0}-nhph00i94d-nhph00i94d.gz
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera sch.D1EEB229.Up2Date
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\refint\mera school.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.pdb
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\mera school.genruntimeconfig.cache
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\ref\mera school.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.Build.Locator.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Drawing.Common.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Runtime.Caching.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Security.Permissions.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\System.Windows.Extensions.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\bin\Debug\net10.0\dotnet-tools.json
+C:\Users\UK Institute Peshawa\source\repos\mera school\mera school\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

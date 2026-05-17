@@ -1,0 +1,154 @@
+@model mera_school.Models.Student
+@{
+    ViewData["Title"] = "Add Student";
+}
+
+<div class="page-header animate-in">
+    <div>
+        <h1 class="page-title"><i class="fas fa-user-plus me-2" style="color:var(--primary)"></i>Add New Student</h1>
+        <div class="page-subtitle">Fill in the details to enroll a new student</div>
+    </div>
+    <a asp-action="Index" class="btn-outline-custom">
+        <i class="fas fa-arrow-left"></i> Back to List
+    </a>
+</div>
+
+<div class="row justify-content-center animate-in delay-1">
+    <div class="col-xl-9 col-lg-10">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+
+            <div class="form-card">
+
+                <!-- Image Upload Section -->
+                <div class="text-center mb-4">
+                    <div class="img-preview-wrapper" onclick="document.getElementById('imageFile').click()">
+                        <img id="imgPreview" src="#" alt="Preview" style="display:none;width:100%;height:100%;object-fit:cover;" />
+                        <div id="imgPlaceholder" class="img-preview-placeholder">
+                            <i class="fas fa-camera fa-2x mb-1 d-block" style="color:#c7d2fe;"></i>
+                            <span>Click to upload photo</span>
+                        </div>
+                    </div>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/*" class="d-none"
+                           onchange="previewImage(this)" />
+                    <div class="text-muted-sm mt-1">JPG, PNG – Max 2MB</div>
+                </div>
+
+                <!-- Personal Info -->
+                <div class="form-section-title">
+                    <i class="fas fa-user"></i> Personal Information
+                </div>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="FullName" class="form-label-custom">
+                            <i class="fas fa-user" style="color:var(--primary)"></i> Full Name *
+                        </label>
+                        <input asp-for="FullName" class="form-control-custom @(ViewData.ModelState["FullName"]?.Errors.Count > 0 ? "is-invalid" : "")"
+                               placeholder="Enter full name" />
+                        <span asp-validation-for="FullName" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label asp-for="Gender" class="form-label-custom">
+                            <i class="fas fa-venus-mars" style="color:var(--primary)"></i> Gender *
+                        </label>
+                        <select asp-for="Gender" class="form-control-custom">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label asp-for="Age" class="form-label-custom">
+                            <i class="fas fa-birthday-cake" style="color:var(--primary)"></i> Age *
+                        </label>
+                        <input asp-for="Age" type="number" class="form-control-custom" placeholder="Age" min="3" max="25" />
+                        <span asp-validation-for="Age" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="form-section-title">
+                    <i class="fas fa-address-card"></i> Contact Information
+                </div>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="Email" class="form-label-custom">
+                            <i class="fas fa-envelope" style="color:var(--primary)"></i> Email *
+                        </label>
+                        <input asp-for="Email" type="email" class="form-control-custom" placeholder="student@email.com" />
+                        <span asp-validation-for="Email" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="PhoneNumber" class="form-label-custom">
+                            <i class="fas fa-phone" style="color:var(--primary)"></i> Phone Number *
+                        </label>
+                        <input asp-for="PhoneNumber" class="form-control-custom" placeholder="03XX-XXXXXXX" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-12">
+                        <label asp-for="Address" class="form-label-custom">
+                            <i class="fas fa-map-marker-alt" style="color:var(--primary)"></i> Address *
+                        </label>
+                        <textarea asp-for="Address" class="form-control-custom" rows="2" placeholder="Full address"></textarea>
+                        <span asp-validation-for="Address" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                </div>
+
+                <!-- Academic Info -->
+                <div class="form-section-title">
+                    <i class="fas fa-graduation-cap"></i> Academic Information
+                </div>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="ClassName" class="form-label-custom">
+                            <i class="fas fa-chalkboard" style="color:var(--primary)"></i> Class *
+                        </label>
+                        <select asp-for="ClassName" class="form-control-custom">
+                            <option value="">Select Class</option>
+                            @foreach (var g in new[]{"Grade 1","Grade 2","Grade 3","Grade 4","Grade 5","Grade 6","Grade 7","Grade 8","Grade 9","Grade 10"})
+                            {
+                                <option value="@g">@g</option>
+                            }
+                        </select>
+                        <span asp-validation-for="ClassName" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="AdmissionDate" class="form-label-custom">
+                            <i class="fas fa-calendar-alt" style="color:var(--primary)"></i> Admission Date *
+                        </label>
+                        <input asp-for="AdmissionDate" type="date" class="form-control-custom" />
+                        <span asp-validation-for="AdmissionDate" class="text-danger" style="font-size:0.78rem;"></span>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex gap-3 justify-content-end pt-2 border-top">
+                    <a asp-action="Index" class="btn-outline-custom">
+                        <i class="fas fa-times"></i> Cancel
+                    </a>
+                    <button type="submit" class="btn-primary-custom">
+                        <i class="fas fa-save"></i> Save Student
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    document.getElementById('imgPreview').src = e.target.result;
+                    document.getElementById('imgPreview').style.display = 'block';
+                    document.getElementById('imgPlaceholder').style.display = 'none';
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

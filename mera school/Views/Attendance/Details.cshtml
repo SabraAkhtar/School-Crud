@@ -1,0 +1,70 @@
+@model mera_school.Models.Attendance
+@{
+    ViewData["Title"] = "Attendance Details";
+}
+
+<div class="page-header animate-in">
+    <div>
+        <h1 class="page-title"><i class="fas fa-clipboard-check me-2" style="color:var(--success)"></i>Attendance Details</h1>
+        <div class="page-subtitle">Record #@Model.Id</div>
+    </div>
+    <div class="d-flex gap-2">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-primary-custom" style="background:linear-gradient(135deg,#10b981,#059669);">
+            <i class="fas fa-edit"></i> Edit
+        </a>
+        <a asp-action="Index" class="btn-outline-custom" style="border-color:#10b981;color:#10b981;">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </div>
+</div>
+
+<div class="row justify-content-center animate-in delay-1">
+    <div class="col-lg-7">
+        <div class="content-card">
+            <div class="content-card-header">
+                <div class="content-card-title">
+                    <i class="fas fa-info-circle" style="color:var(--success)"></i> Attendance Record
+                </div>
+                @if (Model.Status == "Present")
+                { <span class="badge-present" style="font-size:0.85rem;padding:6px 14px;"><i class="fas fa-check me-1"></i>Present</span> }
+                else if (Model.Status == "Absent")
+                { <span class="badge-absent" style="font-size:0.85rem;padding:6px 14px;"><i class="fas fa-times me-1"></i>Absent</span> }
+                else
+                { <span class="badge-leave" style="font-size:0.85rem;padding:6px 14px;"><i class="fas fa-calendar me-1"></i>Leave</span> }
+            </div>
+            <div class="content-card-body">
+                <div class="detail-row">
+                    <div class="detail-label"><i class="fas fa-hashtag me-2 text-muted"></i>Record ID</div>
+                    <div class="detail-value">#@Model.Id</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label"><i class="fas fa-user-graduate me-2 text-muted"></i>Student</div>
+                    <div class="detail-value fw-600">@Model.Student?.FullName</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label"><i class="fas fa-chalkboard-teacher me-2 text-muted"></i>Teacher</div>
+                    <div class="detail-value">@Model.Teacher?.FullName</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label"><i class="fas fa-calendar-alt me-2 text-muted"></i>Date</div>
+                    <div class="detail-value fw-600">@Model.AttendanceDate.ToString("dddd, MMMM dd, yyyy")</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label"><i class="fas fa-toggle-on me-2 text-muted"></i>Status</div>
+                    <div class="detail-value">
+                        @if (Model.Status == "Present")
+                        { <span class="badge-present"><i class="fas fa-check me-1"></i>Present</span> }
+                        else if (Model.Status == "Absent")
+                        { <span class="badge-absent"><i class="fas fa-times me-1"></i>Absent</span> }
+                        else
+                        { <span class="badge-leave"><i class="fas fa-calendar me-1"></i>Leave</span> }
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label"><i class="fas fa-comment me-2 text-muted"></i>Remarks</div>
+                    <div class="detail-value">@(Model.Remarks ?? "No remarks")</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

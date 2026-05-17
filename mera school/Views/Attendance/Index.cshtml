@@ -1,0 +1,163 @@
+@model IEnumerable<mera_school.Models.Attendance>
+@{
+    ViewData["Title"] = "Attendance";
+    int page       = ViewBag.Page       ?? 1;
+    int totalPages = ViewBag.TotalPages ?? 1;
+    int total      = ViewBag.TotalRecords ?? 0;
+    string search  = ViewBag.Search     ?? "";
+    string status  = ViewBag.Status     ?? "";
+    string dateF   = ViewBag.DateFilter ?? "";
+}
+
+<div class="page-header animate-in">
+    <div>
+        <h1 class="page-title"><i class="fas fa-clipboard-check me-2" style="color:var(--success)"></i>Attendance</h1>
+        <div class="page-subtitle">Manage all attendance records – @total record(s) found</div>
+    </div>
+    <a asp-action="Create" class="btn-primary-custom" style="background:linear-gradient(135deg,#10b981,#059669);">
+        <i class="fas fa-calendar-plus"></i> Mark Attendance
+    </a>
+</div>
+
+<!-- Filter Bar -->
+<div class="filter-bar animate-in delay-1">
+    <form method="get" asp-action="Index" class="row g-2 align-items-end">
+        <div class="col-md-3">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" name="search" value="@search" class="search-input" placeholder="Search student or teacher…" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <select name="status" class="form-control-custom">
+                <option value="">All Status</option>
+                <option value="Present" selected="@(status=="Present" ? "selected" : null)">Present</option>
+                <option value="Absent"  selected="@(status=="Absent"  ? "selected" : null)">Absent</option>
+                <option value="Leave"   selected="@(status=="Leave"   ? "selected" : null)">Leave</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input type="date" name="dateFilter" value="@dateF" class="form-control-custom" />
+        </div>
+        <div class="col-md-4 d-flex gap-2">
+            <button type="submit" class="btn-primary-custom flex-fill" style="justify-content:center;background:linear-gradient(135deg,#10b981,#059669);">
+                <i class="fas fa-filter"></i> Filter
+            </button>
+            <a asp-action="Index" class="btn-outline-custom" style="padding:10px 12px;border-color:#10b981;color:#10b981;">
+                <i class="fas fa-redo"></i>
+            </a>
+        </div>
+    </form>
+</div>
+
+<!-- Table Card -->
+<div class="content-card animate-in delay-2">
+    <div class="table-responsive">
+        @if (!Model.Any())
+        {
+            <div class="empty-state">
+                <i class="fas fa-clipboard-check d-block"></i>
+                <h5>No attendance records found</h5>
+                <p class="text-muted-sm">Try adjusting your filters or mark new attendance.</p>
+                <a asp-action="Create" class="btn-primary-custom mt-2 d-inline-flex" style="background:linear-gradient(135deg,#10b981,#059669);">
+                    <i class="fas fa-plus"></i> Mark Attendance
+                </a>
+            </div>
+        }
+        else
+        {
+            <table class="school-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student</th>
+                        <th>Teacher</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var a in Model)
+                    {
+                        <tr>
+                            <td class="text-muted-sm fw-600">@a.Id</td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="table-avatar-placeholder" style="width:32px;height:32px;font-size:0.75rem;">
+                                        @a.Student?.FullName.Substring(0,1).ToUpper()
+                                    </div>
+                                    <span class="fw-600">@a.Student?.FullName</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="table-avatar-placeholder" style="width:32px;height:32px;font-size:0.75rem;background:linear-gradient(135deg,#0ea5e9,#38bdf8);">
+                                        @a.Teacher?.FullName.Substring(0,1).ToUpper()
+                                    </div>
+                                    <span>@a.Teacher?.FullName</span>
+                                </div>
+                            </td>
+                            <td class="fw-600">@a.AttendanceDate.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                @if (a.Status == "Present")
+                                { <span class="badge-present"><i class="fas fa-check me-1"></i>Present</span> }
+                                else if (a.Status == "Absent")
+                                { <span class="badge-absent"><i class="fas fa-times me-1"></i>Absent</span> }
+                                else
+                                { <span class="badge-leave"><i class="fas fa-calendar me-1"></i>Leave</span> }
+                            </td>
+                            <td class="text-muted-sm">@(a.Remarks ?? "—")</td>
+                            <td>
+                                <div class="d-flex gap-1 justify-content-center">
+                                    <a asp-action="Details" asp-route-id="@a.Id" class="action-btn view" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@a.Id" class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <form id="del-a-@a.Id" asp-action="Delete" asp-route-id="@a.Id" method="post" style="display:inline;">
+                                        @Html.AntiForgeryToken()
+                                        <button type="button" class="action-btn delete" title="Delete"
+                                                onclick="confirmDelete('del-a-@a.Id')">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+    @if (totalPages > 1)
+    {
+        string prevDisabled = page == 1 ? "disabled" : "";
+        string nextDisabled = page == totalPages ? "disabled" : "";
+        <div class="d-flex justify-content-between align-items-center px-4 py-3 border-top">
+            <span class="text-muted-sm">Page @(page) of @(totalPages)</span>
+            <div class="pagination-custom">
+                <a asp-action="Index" asp-route-pageNum="@(page-1)" asp-route-search="@search"
+                   asp-route-status="@status" asp-route-dateFilter="@dateF"
+                   class="page-btn @prevDisabled">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                @for (int i = Math.Max(1, page - 2); i <= Math.Min(totalPages, page + 2); i++)
+                {
+                    string activeClass = i == page ? "active" : "";
+                    <a asp-action="Index" asp-route-pageNum="@i" asp-route-search="@search"
+                       asp-route-status="@status" asp-route-dateFilter="@dateF"
+                       class="page-btn @activeClass">@i</a>
+                }
+                <a asp-action="Index" asp-route-pageNum="@(page+1)" asp-route-search="@search"
+                   asp-route-status="@status" asp-route-dateFilter="@dateF"
+                   class="page-btn @nextDisabled">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    }
+</div>

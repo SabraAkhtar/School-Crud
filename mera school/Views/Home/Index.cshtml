@@ -1,0 +1,271 @@
+﻿@model IEnumerable<mera_school.Models.Attendance>
+@{
+    ViewData["Title"] = "Dashboard";
+    int totalStudents   = ViewBag.TotalStudents   ?? 0;
+    int totalTeachers   = ViewBag.TotalTeachers   ?? 0;
+    int totalAttendance = ViewBag.TotalAttendance  ?? 0;
+    int presentToday    = ViewBag.PresentToday     ?? 0;
+    int absentToday     = ViewBag.AbsentToday      ?? 0;
+    int leaveToday      = ViewBag.LeaveToday       ?? 0;
+    int totalToday      = presentToday + absentToday + leaveToday;
+    int presentPct      = totalToday > 0 ? (int)((presentToday * 100.0) / totalToday) : 0;
+    int absentPct       = totalToday > 0 ? (int)((absentToday  * 100.0) / totalToday) : 0;
+    int leavePct        = totalToday > 0 ? (int)((leaveToday   * 100.0) / totalToday) : 0;
+}
+
+<!-- Welcome Banner -->
+<div class="welcome-banner animate-in">
+    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div>
+            <div class="welcome-title">
+                <i class="fas fa-sun me-2"></i>Welcome back, Administrator!
+            </div>
+            <div class="welcome-sub">
+                Here's what's happening at Mera School today – @DateTime.Now.ToString("dddd, MMMM dd, yyyy")
+            </div>
+        </div>
+        <div class="d-flex gap-2">
+            <a asp-controller="Student" asp-action="Create" class="btn btn-light btn-sm fw-600 rounded-pill px-3">
+                <i class="fas fa-user-plus me-1"></i> Add Student
+            </a>
+            <a asp-controller="Attendance" asp-action="Create" class="btn btn-light btn-sm fw-600 rounded-pill px-3">
+                <i class="fas fa-clipboard-check me-1"></i> Mark Attendance
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Stat Cards Row -->
+<div class="row g-4 mb-4">
+    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 animate-in delay-1">
+        <div class="stat-card indigo">
+            <div class="stat-icon indigo"><i class="fas fa-user-graduate"></i></div>
+            <div class="stat-value">@totalStudents</div>
+            <div class="stat-label">Total Students</div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 animate-in delay-2">
+        <div class="stat-card blue">
+            <div class="stat-icon blue"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="stat-value">@totalTeachers</div>
+            <div class="stat-label">Total Teachers</div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 animate-in delay-3">
+        <div class="stat-card cyan">
+            <div class="stat-icon cyan"><i class="fas fa-clipboard-list"></i></div>
+            <div class="stat-value">@totalAttendance</div>
+            <div class="stat-label">Attendance Records</div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 animate-in delay-3">
+        <div class="stat-card green">
+            <div class="stat-icon green"><i class="fas fa-check-circle"></i></div>
+            <div class="stat-value">@presentToday</div>
+            <div class="stat-label">Present Today</div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 animate-in delay-4">
+        <div class="stat-card red">
+            <div class="stat-icon red"><i class="fas fa-times-circle"></i></div>
+            <div class="stat-value">@absentToday</div>
+            <div class="stat-label">Absent Today</div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 animate-in delay-5">
+        <div class="stat-card amber">
+            <div class="stat-icon amber"><i class="fas fa-calendar-minus"></i></div>
+            <div class="stat-value">@leaveToday</div>
+            <div class="stat-label">On Leave Today</div>
+        </div>
+    </div>
+</div>
+
+<!-- Middle Row: Attendance Overview + Quick Links -->
+<div class="row g-4 mb-4">
+
+    <!-- Attendance Overview -->
+    <div class="col-lg-8 animate-in delay-2">
+        <div class="content-card h-100">
+            <div class="content-card-header">
+                <div class="content-card-title">
+                    <i class="fas fa-chart-bar text-indigo-500" style="color:var(--primary)"></i>
+                    Today's Attendance Overview
+                </div>
+                <a asp-controller="Attendance" asp-action="Index" class="btn-outline-custom" style="padding:6px 14px;font-size:0.8rem;">
+                    View All
+                </a>
+            </div>
+            <div class="content-card-body">
+                @if (totalToday == 0)
+                {
+                    <div class="empty-state py-4">
+                        <i class="fas fa-clipboard-list d-block mb-2"></i>
+                        <p class="mb-0">No attendance marked for today yet.</p>
+                        <a asp-controller="Attendance" asp-action="Create" class="btn-primary-custom mt-3 d-inline-flex">
+                            <i class="fas fa-plus"></i> Mark Now
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <!-- Progress Bars -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-600" style="font-size:0.85rem;color:#10b981;">Present</span>
+                            <span class="fw-600" style="font-size:0.85rem;">@presentToday / @totalToday</span>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-fill" style="width:@presentPct%;background:linear-gradient(90deg,#10b981,#34d399);"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-600" style="font-size:0.85rem;color:#ef4444;">Absent</span>
+                            <span class="fw-600" style="font-size:0.85rem;">@absentToday / @totalToday</span>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-fill" style="width:@absentPct%;background:linear-gradient(90deg,#ef4444,#f87171);"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-600" style="font-size:0.85rem;color:#f59e0b;">On Leave</span>
+                            <span class="fw-600" style="font-size:0.85rem;">@leaveToday / @totalToday</span>
+                        </div>
+                        <div class="progress-custom">
+                            <div class="progress-fill" style="width:@leavePct%;background:linear-gradient(90deg,#f59e0b,#fbbf24);"></div>
+                        </div>
+                    </div>
+                    <!-- Summary Badges -->
+                    <div class="d-flex gap-2 mt-4 flex-wrap">
+                        <span class="badge-present"><i class="fas fa-check me-1"></i>@presentPct% Present</span>
+                        <span class="badge-absent"><i class="fas fa-times me-1"></i>@absentPct% Absent</span>
+                        <span class="badge-leave"><i class="fas fa-calendar me-1"></i>@leavePct% Leave</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="col-lg-4 animate-in delay-3">
+        <div class="content-card h-100">
+            <div class="content-card-header">
+                <div class="content-card-title">
+                    <i class="fas fa-bolt" style="color:var(--warning)"></i> Quick Actions
+                </div>
+            </div>
+            <div class="content-card-body d-flex flex-column gap-3">
+                <a asp-controller="Student" asp-action="Create"
+                   class="d-flex align-items-center gap-3 p-3 rounded-xl text-decoration-none"
+                   style="background:#eef2ff;transition:all 0.2s;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#eef2ff'">
+                    <div class="stat-icon indigo" style="width:40px;height:40px;font-size:1rem;margin:0;flex-shrink:0;">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div>
+                        <div class="fw-600" style="color:#3730a3;font-size:0.875rem;">Add New Student</div>
+                        <div class="text-muted-sm">Enroll a student</div>
+                    </div>
+                </a>
+                <a asp-controller="Teacher" asp-action="Create"
+                   class="d-flex align-items-center gap-3 p-3 rounded-xl text-decoration-none"
+                   style="background:#e0f2fe;transition:all 0.2s;" onmouseover="this.style.background='#bae6fd'" onmouseout="this.style.background='#e0f2fe'">
+                    <div class="stat-icon blue" style="width:40px;height:40px;font-size:1rem;margin:0;flex-shrink:0;">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div>
+                        <div class="fw-600" style="color:#0369a1;font-size:0.875rem;">Add New Teacher</div>
+                        <div class="text-muted-sm">Register a teacher</div>
+                    </div>
+                </a>
+                <a asp-controller="Attendance" asp-action="Create"
+                   class="d-flex align-items-center gap-3 p-3 rounded-xl text-decoration-none"
+                   style="background:#d1fae5;transition:all 0.2s;" onmouseover="this.style.background='#a7f3d0'" onmouseout="this.style.background='#d1fae5'">
+                    <div class="stat-icon green" style="width:40px;height:40px;font-size:1rem;margin:0;flex-shrink:0;">
+                        <i class="fas fa-calendar-plus"></i>
+                    </div>
+                    <div>
+                        <div class="fw-600" style="color:#065f46;font-size:0.875rem;">Mark Attendance</div>
+                        <div class="text-muted-sm">Record today's attendance</div>
+                    </div>
+                </a>
+                <a asp-controller="Attendance" asp-action="Index"
+                   class="d-flex align-items-center gap-3 p-3 rounded-xl text-decoration-none"
+                   style="background:#fef3c7;transition:all 0.2s;" onmouseover="this.style.background='#fde68a'" onmouseout="this.style.background='#fef3c7'">
+                    <div class="stat-icon amber" style="width:40px;height:40px;font-size:1rem;margin:0;flex-shrink:0;">
+                        <i class="fas fa-list-alt"></i>
+                    </div>
+                    <div>
+                        <div class="fw-600" style="color:#92400e;font-size:0.875rem;">View All Records</div>
+                        <div class="text-muted-sm">Browse attendance history</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Attendance Table -->
+<div class="content-card animate-in delay-3">
+    <div class="content-card-header">
+        <div class="content-card-title">
+            <i class="fas fa-history" style="color:var(--secondary)"></i> Recent Attendance Records
+        </div>
+        <a asp-controller="Attendance" asp-action="Index" class="btn-primary-custom" style="padding:8px 16px;font-size:0.8rem;">
+            <i class="fas fa-arrow-right"></i> View All
+        </a>
+    </div>
+    <div class="table-responsive">
+        @if (!Model.Any())
+        {
+            <div class="empty-state">
+                <i class="fas fa-clipboard-list d-block"></i>
+                <h5>No attendance records yet</h5>
+                <p class="text-muted-sm">Start by marking attendance for today.</p>
+            </div>
+        }
+        else
+        {
+            <table class="school-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student</th>
+                        <th>Teacher</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-muted-sm">@item.Id</td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="table-avatar-placeholder" style="width:32px;height:32px;font-size:0.75rem;">
+                                        @item.Student?.FullName.Substring(0, 1).ToUpper()
+                                    </div>
+                                    <span class="fw-600">@item.Student?.FullName</span>
+                                </div>
+                            </td>
+                            <td>@item.Teacher?.FullName</td>
+                            <td>@item.AttendanceDate.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                @if (item.Status == "Present")
+                                { <span class="badge-present"><i class="fas fa-check me-1"></i>Present</span> }
+                                else if (item.Status == "Absent")
+                                { <span class="badge-absent"><i class="fas fa-times me-1"></i>Absent</span> }
+                                else
+                                { <span class="badge-leave"><i class="fas fa-calendar me-1"></i>Leave</span> }
+                            </td>
+                            <td class="text-muted-sm">@(item.Remarks ?? "—")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
